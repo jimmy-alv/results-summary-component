@@ -1,6 +1,6 @@
-const origin = window.location.origin;
+const {href} = window.location ;
 
-fetch(`${origin}/js/data.json`)
+fetch(`${href}/js/data.json`)
   .then((response) => response.json())
   .then((data) => {
     let scoreResult = 0;
