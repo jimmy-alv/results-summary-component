@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+
+    --ifc-light-red: hsl(0, 100%, 67%);
+    --ibc-light-red: hsl(0, 100%, 67%, 10%);
+
+    --ifc-orangey-yellow: hsl(39, 100%, 56%);
+    --ibc-orangey-yellow: hsl(39, 100%, 56%, 10%);
+
+    --ifc-green-teal: hsl(166, 100%, 37%);
+    --ibc-green-teal: hsl(166, 100%, 37%, 10%);
+
+    --ifc-cobalt-blue: hsl(234, 85%, 45%);
+    --ibc-cobalt-blue: hsl(234, 85%, 45%, 5%);
+
+    /* Background colors */
+    --background-light-slate-blue: hsl(252, 100%, 67%);
+    --background-light-royal-blue: hsl(241, 81%, 54%);
+
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Fonts colors */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: 'Hanken Grotesk';
+    background-color: rgb(235, 235, 235);
+}
+
+main {
+    display: flex;
+    max-width: 700px;
+    box-shadow: 26px 32px 25px 5px rgb(227, 227, 227);
+    background-color: white;
+    border-radius: 25px;
+}
+
+.result-card,
+.summary-card {
+    width: 50%;
+}
+
+.result-card {
+    background: var(--background-light-royal-blue);
+    background: linear-gradient(0deg, var(--background-light-royal-blue) 70%, var(--background-light-slate-blue) 100%);
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+.result-card h2,
+.result-card p {
+    color: var(--light-lavender);
+}
+
+.result-card h3 {
+    font-size: 32px;
+    color: var(--white);
+}
+
+.result-card .score {
+    display: inline-block;
+    padding: 30px;
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(180deg, var(--violet-blue-circle) 0%, var(--persian-blue-circle) 100%);
+}
+
+.result-card .score p:nth-child(1) {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 72px;
+}
+
+.summary-card {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.summary-card .items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-card .item {
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-card .item .item-name img,
+.summary-card .item .item-name span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.summary-card .item .item-qualifications span {
+    color: gray;
+    font-weight: 900;
+}
+
+.summary-card .item .item-qualifications span:nth-child(1) {
+    font-size: 16px;
+    color: rgb(32, 32, 32);
+}
+
+.summary-card .reaction {
+    background-color: var(--ibc-light-red);
+    color: var(--ifc-light-red);
+}
+
+.summary-card .memory {
+    background-color: var(--ibc-orangey-yellow);
+    color: var(--ifc-orangey-yellow);
+}
+
+.summary-card .verbal {
+    background-color: var(--ibc-green-teal);
+    color: var(--ifc-green-teal);
+}
+
+.summary-card .visual {
+    background-color: var(--ibc-cobalt-blue);
+    color: var(--ifc-cobalt-blue);
+}
+
+.summary-card .btn {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 50px;
+    /* background-color: var(--dark-gray-blue); */
+    background: linear-gradient(0deg, var(--dark-gray-blue) 70%, var(--dark-gray-blue) 100%);
+    color: var(--white);
+    font-weight: 700;
+    transition: background 0.8s;
+}
+
+.summary-card .btn:hover, .summary-card .btn:focus{
+    background: linear-gradient(0deg, var(--background-light-royal-blue) 30%, var(--background-light-slate-blue) 100%);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display: block;
+        background-color: white;
+    }
+
+    main {
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: none;
+        background-color: white;
+    }
+
+    .result-card,
+    .summary-card {
+        width: 100%;
+    }
+
+    .result-card {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
