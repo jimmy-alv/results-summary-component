@@ -61,7 +61,7 @@ main {
 
 .result-card {
     background: var(--background-light-royal-blue);
-    background: linear-gradient(0deg, var(--background-light-royal-blue) 70%, var(--background-light-slate-blue) 100%);
+    background: linear-gradient(0deg, var(--background-light-royal-blue), var(--background-light-slate-blue));
     padding: 40px;
     text-align: center;
     display: flex;
@@ -72,7 +72,7 @@ main {
     border-radius: 25px;
 }
 
-.result-card h2,
+.result-card h1,
 .result-card p {
     color: var(--light-lavender);
 }
@@ -88,7 +88,7 @@ main {
     border-radius: 100%;
     width: 180px;
     height: 180px;
-    background: linear-gradient(180deg, var(--violet-blue-circle) 0%, var(--persian-blue-circle) 100%);
+    background: linear-gradient(180deg, var(--violet-blue-circle), var(--persian-blue-circle));
 }
 
 .result-card .score p:nth-child(1) {
